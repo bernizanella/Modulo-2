@@ -1,0 +1,79 @@
+---
+title: "Total Cost of Ownership"
+author: "Grupo Hudson"
+date: "2024-03-27"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What Is Total Cost of Ownership?
+
+Total cost of ownership (TCO) is the purchase price of an asset plus the costs of operation. Assessing the total cost of ownership means taking a bigger picture look at what the product is and what its value is over time.
+
+When choosing among alternatives in a purchasing decision, buyers often look at an item’s short-term price, known as its purchase price. However they should also consider its long-term price, which is its total cost of ownership. These are the long-term costs and expenses incurred during the product’s useful life and ultimate disposal. The item with the lower total cost of ownership can be the better value in the long run.
+
+## How TCO Works?
+
+Total cost of ownership is considered by companies and individuals when they are looking to buy assets and make investments in capital projects. For a business, the cost of purchase and the costs of operations and maintenance are often itemized separately on financial statements. The former is booked as a capital expenditure, while the latter is part of operating expenditures. A comprehensive analysis of the cost of ownership is a common practice for businesses.
+
+Companies use total cost of ownership over the long term as a framework for analyzing business deals. Looking at total cost of ownership is a way of taking a more holistic approach that assesses the purchase from a broad perspective. This analysis includes the initial purchase price as well as all direct and indirect expenses.
+
+While direct expenses can be easily reported, companies most often seek to analyze all potential indirect expenses that can be of significant influence in deciding whether to complete a purchase.
+
+## Example of TCO
+
+An example of a business investment that requires a thorough analysis of total cost of ownership is an investment in a new computer system. The computer system has an initial purchase price.
+
+Additional costs often include new software, installation, transition costs, employee training, security costs, disaster recovery planning, ongoing support, and future upgrades. Using these costs as a guide, the company compares the advantages and disadvantages of purchasing the computer system as well as its overall benefit to the company for the long term.
+
+On a smaller scale, individuals also use total cost of ownership when making purchasing decisions. While total cost of ownership can be overlooked, its analysis is essential in preventing unnecessary future losses that can arise from focusing only on the immediate direct costs of a purchase.
+
+## How to Use TCO
+
+The purchase of a car is one example where cost comparison matters. Total cost of ownership of a car is not just the purchase price but also the expenses incurred through its use, such as repairs, insurance, and fuel.
+
+The total cost of ownership analysis can be especially important when comparing a used car to a new car. A used car that appears to be a great bargain actually might have a total cost of ownership that is higher than that of a new car if the used car requires numerous repairs, while the new car has a three-year warranty that could cover repair charges.
+
+In the automotive industry, leading consumer resource Kelley Blue Book provides buyers with details on total cost of ownership. This industry analysis is provided for various vehicles and includes a variety of expenses, such as fuel, insurance, repairs, and depreciation.
+
+## What Types of Costs Should Be Considered in TCO?
+
+The components of TCO depend on the item but should always include the initial purchase price, costs associated with operating the item, ongoing maintenance, training needed, and how long the item is expected to last before replacement is needed.
+
+## What Kinds of Purchases Benefit From a TCO Analysis?
+
+Considering TCO is important before purchasing any item, but especially larger purchases. Cars, homes, and other major purchases should have a TCO analysis. For businesses, a TCO analysis could apply to new technology or equipment needed for the job.
+
+## What Resources Are Available to Help Determine TCO?
+
+Any information source about the operating costs of an item will be helpful. Consumer Reports is a good source for many items, including technology and automobiles. Resources like Kelley Blue Book and Edmunds are good sources for information about auto purchases.
+
+## The Bottom Line
+
+The total cost of ownership can be a useful statistic in a number of situations, from business operations to personal purchases. If you're making a major purchase, remember to look beyond the purchase price to the total costs involved with the product, such as maintenance or repairs.
+
+## Table with Invented Costs:
+Tabla con costos para crear mi emprendimiento (faltan algunos costos, como escritos, mesas, etc.)
+
+A continuación se realiza una tabla de costos para iniciar un microemprendimiento de impresión 3D:
+
+ Unidades | Elemento | Precio unitario | Precio Total |
+|:-------:|:------|:-----------:|:---------:|
+| 5 | Computadora | 600.000 |3.000.000 |
+| 1 | Servidor | 1.000.000 | 1.000.000 |
+| 5 | Impresora 3D | 300.000 | 1.500.000 |
+|5 | Licencias de Microsoft|200.000|1.000.000| 
+|5|Antivirus|50.000|250.000| 
+|2|Extintores de incendios|70.000|140.000|
+|10|Filamentos para impresión 3D|20.000|200.000|
+|6|Escritorios|65.000|390.000|
+|6|Sillas de oficina|68.000|408.000|
+
+|Monto Total|||7.888.000|
+
+Para armar una tabla como la anterior para identificar las columnas separamos con barras (|texto|) lo que va dentro de cada columna y cada renglón en nuestro código significará una fila de la tabla. 
