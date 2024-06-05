@@ -1,0 +1,438 @@
+---
+title: Módulo 2 - Lenguaje de programación R-Cran (paradigma de objetos)
+authors:
+  - name: Berard, Louise
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: louise.berard28@gmail.com
+  - name: Ibañez, Celina 
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: mcelinaibanez@gmail.com
+  - name: Mobilia, Pilar 
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: pilarmobilia@gmail.com
+  - name: Torresi, Carla 
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: torresi.carla16@gmail.com
+  - name: Valli, Karima 
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: karimavallillalen@gmail.com
+  - name: Zanella, Bernardita 
+    department: Técnicas y Herramientas Modernas
+    affiliation: Facultad de Ingeniería, Uncuyo
+    location: Mendoza, Argentina
+    email: bernizanella2014@gmail.com
+abstract: |
+  Este módulo establece los primeros pasos de programación en R-Cran.
+keywords:
+  - Programing Language
+  - R-Cran
+  - RMarkdown
+bibliography: references.bib
+biblio-style: apa
+output: rticles::arxiv_article
+---
+
+# Introducción
+
+En este módulo, exploraremos los siguientes temas:
+
+   1. **Introducción a los Algoritmos:**
+       - Comprenderemos qué son los algoritmos y cómo se aplican en la resolución de problemas.
+       - Analizaremos ejemplos de algoritmos comunes y su importancia en la programación.
+
+   2. **Repaso de Conceptos de Cálculo Numérico (Matlab / Octave):**
+       - Refrescaremos nuestros conocimientos sobre cálculo numérico, centrándonos en herramientas como Matlab y Octave.
+       - Exploraremos cómo aplicar estos conceptos en la programación.
+
+   3. **El Lenguaje de Programación R:**
+       - Aprenderemos sobre R, un lenguaje ampliamente utilizado en análisis de datos y estadísticas.
+       - Veremos cómo instalar R y configurar nuestro entorno de trabajo.
+
+   4. **Creación de Notebooks en IDEs (RMarkdown):**
+       - Utilizaremos RMarkdown para crear documentos interactivos que combinen código, texto y visualizaciones.
+       - Exploraremos cómo generar informes y presentaciones utilizando esta herramienta.
+
+   5. **Cheat Sheets:**
+       - Descubriremos hojas de referencia (cheat sheets) para R y otros lenguajes, que nos ayudarán a recordar funciones y sintaxis clave.
+
+   6. **Estructura de Datos en R:**
+       - Estudiaremos las estructuras de datos fundamentales en R, como matrices, vectores y dataframes.
+      - Practicaremos su manipulación y análisis.
+
+   7. **Importación de Datasets (Kaggle):**
+       - Aprenderemos a importar conjuntos de datos desde fuentes externas, como Kaggle.
+       - Realizaremos ejercicios prácticos con datos reales.
+
+   8. **Gestión de Proyectos en GitHub:**
+       - Exploraremos cómo utilizar GitHub para gestionar proyectos de programación colaborativos.
+       - Veremos cómo trabajar con repositorios, ramas y colaboradores.
+
+   9. **Ejercicios Prácticos:**
+       - Abordaremos varios ejercicios, incluyendo:
+       - La penitencia de Taylor (¿qué será esto?).
+       - Algoritmo de ordenación.
+       - Multiplicación vectorial.
+       - Creación de gráficos.
+
+# Ecuaciones
+\label{sec:headings}
+
+You can use directly LaTeX command or Markdown text. 
+
+LaTeX command can be used to reference other section. See Section \ref{sec:headings}.
+However, you can also use **bookdown** extensions mechanism for this.
+
+## Ecuaciones en bloques
+
+You can use equation in blocks
+
+$$
+\xi _{ij}(t)=P(x_{t}=i,x_{t+1}=j|y,v,w;\theta)= {\frac {\alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}{\sum _{i=1}^{N} \sum _{j=1}^{N} \alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}}
+$$
+
+But also inline i.e $z=x+y$
+
+# Ejemplos de citaciones, figuras, tablas, referencias
+\label{sec:others}
+
+You can insert references. Here is some text [@kour2014real; @kour2014fast] and see @hadash2018estimate.
+
+The documentation for \verb+natbib+ may be found at
+
+You can use custom blocks with LaTeX support from **rmarkdown** to create environment.
+
+::: {.center latex=true}
+  <http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}>
+:::
+
+Of note is the command \verb+\citet+, which produces citations
+appropriate for use in inline text.  
+
+You can insert LaTeX environment directly too.
+
+\begin{verbatim}
+   \citet{hasselmo} investigated\dots
+\end{verbatim}
+
+produces
+
+\begin{quote}
+  Hasselmo, et al.\ (1995) investigated\dots
+\end{quote}
+
+\begin{center}
+  \url{https://www.ctan.org/pkg/booktabs}
+\end{center}
+
+
+## Figures
+
+You can insert figure using LaTeX directly. 
+
+See Figure \ref{fig:fig1}. Here is how you add footnotes. [^Sample of the first footnote.]
+
+\begin{figure}
+  \centering
+  \fbox{\rule[-.5cm]{4cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+  \caption{Sample figure caption.}
+  \label{fig:fig1}
+\end{figure}
+
+But you can also do that using R.
+
+```{r fig2, fig.cap = "Another sample figure"}
+plot(mtcars$mpg)
+```
+
+You can use **bookdown** to allow references for Tables and Figures.
+
+## Tables
+
+Below we can see how to use tables. 
+
+See awesome Table~\ref{tab:table} which is written directly in LaTeX in source Rmd file.
+
+\begin{table}
+ \caption{Sample table title}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{2}{c}{Part}                   \\
+    \cmidrule(r){1-2}
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:table}
+\end{table}
+
+You can also use R code for that.
+
+```{r}
+knitr::kable(head(mtcars), caption = "Head of mtcars table")
+```
+
+## Lists
+
+- Item 1
+- Item 2 
+- Item 3
+
+    Código html w3
+
+````{verbatim}
+<html>
+<head>
+Titulo
+</head>
+<h1> Titulo </h1>
+</head>
+</head>
+
+
+````
+
+Este código es compatible con w3 Consortium Ver:  [@w3extensible] .
+
+Está conformado siguien las regles de paridad da tags. esto quiere decir que todo tag que se abre, luego se cierra.
+
+# Elementos básicos de programación
+
+En este breve tutorial, exploraremos algunos elementos clave del lenguaje de programación R y cómo podemos utilizarlos para resolver problemas de la vida cotidiana. Nuestro enfoque estará en la eficiencia computacional y la comparación entre soluciones implementadas en R y soluciones conocidas.
+Veremos:
+   - Generar un vector secuencia
+   - Implementación de una serie Fibonacci
+   - Ordenación de un vector por método burbuja
+   - La penitencia de Taylor
+   - Algoritmo de funciones estadísticas
+
+\pagebreak
+
+## Ideas de cómo medir el tiempo de ejecución
+
+El benchmarking es una técnica común para comparar algoritmos y evaluar su eficiencia en términos de tiempo de ejecución, uso de memoria y otros recursos. Aunque no siempre hay un "mejor" algoritmo universal, el benchmarking nos ayuda a seleccionar la opción más adecuada según las características del problema y los recursos disponibles.
+
+- Ejemplo con Matrices en Octave o Matlab: En Octave o Matlab, solíamos medir el tiempo de ejecución de algoritmos utilizando los comandos `tic` y `toc`. Por ejemplo:
+  1. Generábamos una matriz **A**.
+  2. Iniciábamos el cronómetro con `tic`.
+  3. Calculábamos la inversa de **A** utilizando un método (por ejemplo, determinante).
+  4. Deteníamos el cronómetro con `toc` y obteníamos el tiempo de ejecución.
+  5. Repetíamos el proceso con otro método (por ejemplo, matriz LU).
+
+- Opciones en R para Medir el Tiempo de Ejecución:
+
+1. **`Sys.time()`**:
+   - Proporciona una aproximación del tiempo de ejecución total de un bloque de código.
+   - Útil para evaluaciones rápidas.
+
+2. **`system.time()`**:
+   - Proporciona información más detallada, incluyendo el tiempo de CPU utilizado por el código.
+   - Permite medir el tiempo de ejecución de funciones específicas.
+
+3. **Paquetes R para Benchmarking**:
+   - **`rbenchmark`**, **`microbenchmark`** y **`tictoc`** son paquetes que miden el tiempo y también informan sobre el uso de memoria y CPU.
+
+### Usando Sys.time
+
+El tiempo de ejecución de un fragmento de código se puede medir tomando la diferencia entre el tiempo al inicio y al final del fragmento de código leyendo los registros del RTC (Real Time Clock).
+
+Cálculo del tiempo que se demora en armar la matriz el algoritmo:
+
+```{r}
+mi_vector_d <- seq(1:100)
+start_time <- Sys.time()
+mi_matriz_e <- matrix(mi_vector_d, nrow=10, byrow=TRUE)
+end_time <- Sys.time()
+end_time - start_time
+```
+
+Si se usa el comando dentro de un documento en R-Studio te demorarás mucho tiempo cuando compiles un PDF o una presentación.
+
+### Método tictoc
+
+Esto de usar una biblioteca es llamar u cargar una procedimientos que generará comando nuevos en R. Como ya fue comentado, cargar una biblioteca implica ejecutar el comando install.packages() o usar en r-studio el menú de Herramientas y Luego Instalar paquetes. Las funciones tic y toc son de la misma biblioteca de Octave/Matlab y se usan de la misma manera para la evaluacion comparativa que el tiempo de sistema recién demostrado. Sin embargo, tictoc agrega mucha más comodidad al usuario y armonía al conjunto.
+
+```{r}
+library(tictoc)
+mi_vector_f <- seq(1:100)
+tic("Tiempo que se demora en hacer la matriz g")
+mi_matriz_g <- matrix(mi_vector_d, nrow=10, byrow=TRUE)
+mi_vector_f
+mi_matriz_g
+toc()
+```
+
+## Vectores
+
+Un vector es una estructura de datos que almacena números de doble presición.
+
+```{r}
+mi_vector_a <- c(12,34,12,54,23,12,65,34,12,56,66)
+mi_vector_b <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)#seq(1:16)
+
+mi_vector_a
+mi_vector_b
+```
+
+### Suma de vectores 
+
+```{r}
+sum(mi_vector_a,mi_vector_b)
+```
+
+### Generar vector secuencia
+
+```{r}
+A <- 0
+for (i in 1:50000) { A[i] <- (i*2)}
+head (A)
+```
+
+Secuencias generada con for
+- [1] 2 4 6 8 10 12
+```{r}
+tail (A)
+```
+- [1] 99990 99992 99994 99996 99998 100000
+
+Secuencia generada con R
+- [1] 1 3 5 7 9 11
+- [1] 999989 999991 999993 999995 999997 999999
+
+## Serie Fibonacci
+
+En matemáticas, la sucesión o serie de Fibonacci es la siguiente sucesión infinita de números naturales:
+              0,1,1,2,3,5,8 ... 89,144,233 ...
+La sucesión comienza con los números 0 y 1,2 a partir de estos, cada término es la suma de los dos anteriores, es la relación de recurrencia que la define. A los elementos de esta sucesión se les llama números de Fibonacci. Tiene numerosas aplicaciones en ciencias de la computación, matemática y teoría de juegos. También aparece en configuraciones biológicas, como por ejemplo en las ramas de los árboles, en la disposición de las hojas en el tallo, en las flores de alcachofas y girasoles, en las inflorescencias del brécol romanesco, en la configuración de las piñas de las coníferas, en la reproducción de los conejos y en como el ADN codifica el crecimiento de formas orgánicas complejas. De igual manera, se encuentra en la estructura espiral del caparazón de algunos moluscos, como el nautilus.
+
+```{r}
+start_time <- Sys.time()
+a<-0
+b<-1
+c<-a+b
+
+  while (c<=1000000) {
+    a<-b
+    b<-c
+    c<-a+b
+  }
+c
+end_time <- Sys.time()
+end_time - start_time
+```
+
+## Método Burbuja
+
+La Ordenación de burbuja (Bubble Sort en inglés) es un sencillo algoritmo de ordenamiento. Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces toda la lista hasta que no se necesiten más intercambios, lo cual significa que la lista está ordenada. Este algoritmo obtiene su nombre de la forma con la que suben por la lista los elementos durante los intercambios, como si fueran pequeñas burbujas. También es conocido como el método del intercambio directo. Dado que solo usa comparaciones para operar elementos, se lo considera un algoritmo de comparación, siendo uno de los más
+sencillos de implementada.
+
+```{r}
+x<-sample(1:100,10)
+start_time <- Sys.time()
+burbuja <- function(x){
+n<-length(x)
+for(j in 1:(n-1)){
+for(i in 1:(n-j)){
+if(x[i]>x[i+1]){
+temp<-x[i]
+x[i]<-x[i+1]
+x[i+1]<-temp
+}
+}
+}
+return(x)
+}
+res<-burbuja(x)
+end_time <- Sys.time()
+end_time - start_time
+```
+
+## Penitencia de Gauss
+
+A este método lo realizamos de 2 formas:
+
+### Sumas y multiplicación
+```{r}
+start_time <- Sys.time()
+suma <- 0
+n<-10000
+for (i in 1:n) {
+    suma <- suma + i
+}
+suma
+end_time <- Sys.time()
+end_time - start_time
+```
+```{r}
+n<-500
+mi_vector_b<- seq(1:n)
+S1<-0
+R<-0
+S1<-mi_vector_b[1]+mi_vector_b[n]
+R<-(n-1)/2*S1
+R
+```
+
+### For con bucle
+```{r}
+m<-500
+mi_vector_a<- seq(1:m)
+R <- 0  
+
+for (i in 1:m) {
+  R <- R + mi_vector_a[i]
+} 
+R
+```
+
+## Matrices
+Las matrices se parecen a los vectores, pero tienen filas y columnas.
+Se alimentan de vectores.
+
+```{r}
+mi_matriz_c <- matrix(mi_vector_b, nrow=4, byrow=4)
+mi_matriz_c
+```
+
+### Llenar por fila o columna la matriz
+byrow=TRUE, me llena por fila
+byrow=FALSE, me llena por columna
+
+### ¿Cómo accedo a un elemento de la matriz?
+```{r}
+mi_matriz_c[2,4]
+```
+
+### ¿Cómo traer una fila completa?
+```{r}
+mi_matriz_c[2, ]
+```
+
+### ¿Cómo traer una columna completa?
+```{r}
+mi_matriz_c[ ,3]
+```
+
+### ¿Cómo accedo a toda la matriz menos la fila/columna 2?
+```{r}
+mi_matriz_c[-2, ]
+```
+
+# Referencias Bibliográficas
+
+https://themys.sid.uncu.edu.ar/rpalma/TyHM/Benchmark/Elementos-de-Programaci%c3%b3n.pdf
+
+.
